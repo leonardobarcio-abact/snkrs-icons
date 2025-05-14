@@ -24,6 +24,7 @@ nav {
 .content {
     max-width: 1340px;
     margin: auto;
+    padding: 0 20px;
 }
 
 nav ul {
@@ -56,17 +57,16 @@ nav a {
     margin: 100px 0;
 }
 
-.new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon-models h2{
+.new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon-models h2 {
     font-size: 48px;
     margin-bottom: 40px;
     font-weight: 700;
 }
 
-.card img{
+.card img {
      width: 280px;
      height: 220px;
-     object-fit: fill;
-     
+     object-fit: fill;    
 }
 
 .card {
@@ -85,81 +85,97 @@ nav a {
     gap: 20px;
     margin-bottom: 20px;
 }
-.card-group-home{
+
+.card-group-discover-more {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
-.card-iconcollabs{
+
+.discover-more-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-iconcollabs {
     width: 660px;
     height: 260px;
     background-color: #F5F5F7;
-    margin-top: 20px;
     border-radius: 20px;
 }
-.card-iconmodels{
+
+.card-iconmodels {
     width: 660px;
     height: 260px;
     background-color: #F5F5F7;
     border-radius: 20px;
     
 }
-.card-culture{
+
+.card-culture {
     width: 660px;
     height: 540px;
     border-radius: 20px;
     background-color: #F5F5F7;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-.card-culture p{
+.card-culture p {
     text-align: center;
 }
-.card-iconcollabs p{
+
+.card-iconcollabs p {
     text-align: center;
 }
-.card-iconmodels p{
+
+.card-iconmodels p {
     text-align: center;
 }
-.card-group-icon{
+
+.card-group-icon {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
 }
-.card-culture p.titolo-scarpa{
+
+.card-culture p.titolo-scarpa {
     font-weight:700;
     font-size: 38px;
     color: #111111;
 }
-.card-iconmodels p.titolo-scarpa{
+
+.card-iconmodels p.titolo-scarpa {
     font-weight:700;
     font-size: 38px;
     color: #111111;
 }
-.card-iconcollabs p.titolo-scarpa{
+
+.card-iconcollabs p.titolo-scarpa {
     font-weight:700;
     font-size: 38px;
     color: #111111;
 }
-.card p{
+
+.card p {
     text-align: center;
 }
 
-.card-icon p{
+.card-icon p {
     text-align: center;
 }
 
-.card-icon img{
-     width: 480px;
-     height: 260px;
-     object-fit: fill;
-     
+.card-icon img {
+    width: 480px;
+    height: 260px;
+    object-fit: fill;     
 }
-.card-group-home a{
+.card-group-home a {
     text-decoration: none;
 }
-.card-icon p.titolo-scarpa{
+
+.card-icon p.titolo-scarpa {
     font-weight:700;
     font-size: 38px;
     color: #111111;
@@ -180,13 +196,13 @@ nav a {
     align-items: center;
 }
 
-.card p.titolo-scarpa{
+.card p.titolo-scarpa {
     font-weight:600;
     font-size: 22px;
     color: #111111;
 }
 
-.card p.data{
+.card p.data {
     font-weight:500;
     font-size: 22px;
     color: #909090;
@@ -196,11 +212,11 @@ nav a {
     margin-bottom: 0px;
 }
 
-.card-group a {
+.card-group a, .discover-more a {
     text-decoration: none;
 }
 
-.viewmore p{
+.viewmore p {
     background-color: #111111;
     color: #F5F5F7;
     font-size: 25px;
@@ -213,7 +229,7 @@ nav a {
     margin-top: 40px;
 }
 
-.upcoming-releases a{
+.upcoming-releases a {
     text-decoration: none;
 }
 
@@ -222,6 +238,11 @@ footer {
     color: #fff;
     background-color: #1a1a1a;
     font-size: 18px;
+}
+
+.footer-content {
+    max-width: 1440px;
+    margin: auto;
 }
 
 .footer {

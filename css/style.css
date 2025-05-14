@@ -85,13 +85,63 @@ nav a {
     gap: 20px;
     margin-bottom: 20px;
 }
+.card-group-home{
+    display: flex;
+    gap: 10px;
+}
+.card-iconcollabs{
+    width: 660px;
+    height: 260px;
+    background-color: #F5F5F7;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.card-iconmodels{
+    width: 660px;
+    height: 260px;
+    background-color: #F5F5F7;
+    border-radius: 20px;
+    
+}
+.card-culture{
+    width: 660px;
+    height: 540px;
+    border-radius: 20px;
+    background-color: #F5F5F7;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.card-culture p{
+    text-align: center;
+}
+.card-iconcollabs p{
+    text-align: center;
+}
+.card-iconmodels p{
+    text-align: center;
+}
 .card-group-icon{
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
 }
-
+.card-culture p.titolo-scarpa{
+    font-weight:700;
+    font-size: 38px;
+    color: #111111;
+}
+.card-iconmodels p.titolo-scarpa{
+    font-weight:700;
+    font-size: 38px;
+    color: #111111;
+}
+.card-iconcollabs p.titolo-scarpa{
+    font-weight:700;
+    font-size: 38px;
+    color: #111111;
+}
 .card p{
     text-align: center;
 }
@@ -106,7 +156,9 @@ nav a {
      object-fit: fill;
      
 }
-
+.card-group-home a{
+    text-decoration: none;
+}
 .card-icon p.titolo-scarpa{
     font-weight:700;
     font-size: 38px;

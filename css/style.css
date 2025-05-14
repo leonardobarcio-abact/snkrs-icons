@@ -7,7 +7,6 @@
 body {
     font-family: "futura-pt", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     color: #111111;
-    margin: 0 20px;
 }
 
 img {
@@ -62,6 +61,7 @@ nav a {
     margin-bottom: 40px;
     font-weight: 700;
 }
+
 .card img{
      width: 280px;
      height: 220px;
@@ -150,4 +150,75 @@ nav a {
 }
 .upcoming-releases a{
     text-decoration: none;
+}
+
+footer {
+    font-size: 18px;
+    color: #fff;
+    background-color: #1a1a1a;
+    font-size: 18px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-social p {
+    font-weight: 600;
+}
+
+.footer-social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.footer-social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-nav ul, .footer-models ul, .footer-collabs ul, .footer-contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 400;
+}
+
+.footer-title {
+  font-weight: 600;  
+}
+
+p.footer-logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.footer-website-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px 50px 50px;
+    font-weight: 400px;
+}
+
+.footer-info {
+    display: flex;
+    gap: 16px;
 }

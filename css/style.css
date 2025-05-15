@@ -54,7 +54,7 @@ nav a {
     width: 100%;
 }
 
-.new-releases, .discover-more, .hot-releases, .upcoming-releases, .icon-models {
+.new-releases, .discover-more, .culture, .hot-releases, .upcoming-releases, .icon-models {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,6 +212,65 @@ nav a {
 
 .upcoming-releases a {
     text-decoration: none;
+}
+
+.culture-content {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.culture-content:last-child {
+    margin-bottom: 0;
+}
+
+.culture-text {
+    max-width: 620px;
+}
+
+.culture-text h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.culture-p p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+.culture-p p:last-child {
+    margin-bottom: 0;
+}
+
+.culture-p {
+    margin-bottom: 100px;
+}
+
+.culture-p:last-child {
+    margin-bottom: 0;
+}
+
+.culture-image img {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    height: 818px;
+    width: 620px;
+    object-fit: cover;
+}
+
+.culture-image-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.culture-image-2 img {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    height: 570px;
+    width: 620px;
+    object-fit: cover;
 }
 
 footer {

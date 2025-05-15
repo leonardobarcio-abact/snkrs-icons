@@ -45,7 +45,13 @@ nav a {
 .hero {
     height: 620px;
     border-radius: 20px;
-    background-color: #2c2c2c;
+}
+
+.hero img {
+    object-fit: cover;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
 }
 
 .new-releases, .discover-more, .hot-releases, .upcoming-releases, .icon-models {

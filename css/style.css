@@ -54,7 +54,7 @@ nav a {
     width: 100%;
 }
 
-.new-releases, .discover-more, .culture, .hot-releases, .upcoming-releases, .icon, .sneaker-model, .sneaker-collab {
+.new-releases, .discover-more, .culture, .hot-releases, .upcoming-releases, .icon, .sneaker-model, .sneaker-collab, .gallery, .favourites {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +62,7 @@ nav a {
     margin: 100px 0;
 }
 
-.new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2 {
+.new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
     font-size: 48px;
     margin-bottom: 40px;
     font-weight: 700;
@@ -151,7 +151,29 @@ nav a {
     row-gap: 20px;
     column-gap: 20px;
 }
+.card-group-gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.card-gallery {
+    display: flex;
+    height: 400px;
+    width: 660px;
+    border-radius: 20px;
+    background-color: #F5F5F7;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
 
+.card-gallery img {
+    height: 360px;
+    width: 480px;
+    object-fit: cover;
+}
 .card p {
     text-align: center;
 }
@@ -191,7 +213,12 @@ nav a {
     font-size: 32px;
     color: #111111;
 }
-
+.card-icon p.favourites{
+    font-weight:600;
+    font-size: 22px;
+    color: #111111;
+    margin-top: 48px;
+}
 .card p.titolo-scarpa {
     font-weight:600;
     font-size: 22px;

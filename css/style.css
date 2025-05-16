@@ -54,7 +54,7 @@ nav a {
     width: 100%;
 }
 
-.new-releases, .discover-more, .culture, .hot-releases, .upcoming-releases, .icon-models {
+.new-releases, .discover-more, .culture, .hot-releases, .upcoming-releases, .icon, .sneaker-model, .sneaker-collab {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,16 +62,10 @@ nav a {
     margin: 100px 0;
 }
 
-.new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon-models h2 {
+.new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2 {
     font-size: 48px;
     margin-bottom: 40px;
     font-weight: 700;
-}
-
-.card img {
-     width: 280px;
-     height: 220px;
-     object-fit: fill;    
 }
 
 .card {
@@ -81,19 +75,32 @@ nav a {
     border-radius: 20px;
     background-color: #F5F5F7;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 18px;
+}
+
+.card img {
+    width: 280px;
+    height: 220px;
+    object-fit: cover;
 }
 
 .card-group {
     display: flex;
     gap: 20px;
-    margin-bottom: 20px;
 }
 
 .card-group-discover-more {
     display: flex;
     gap: 20px;
+}
+
+.card-group-releases {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .discover-more-group {
@@ -109,9 +116,15 @@ nav a {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 18px;
+}
+
+.card-discover-more-1 img, .card-discover-more-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-discover-more-2 {
@@ -121,7 +134,7 @@ nav a {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 18px;
 }
@@ -133,9 +146,10 @@ nav a {
 }
 
 .card-group-icon {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .card p {
@@ -146,20 +160,8 @@ nav a {
     text-align: center;
 }
 
-.card-icon img {
-    width: 480px;
-    height: 260px;
-    object-fit: fill;     
-}
-
 .card-group-home a {
     text-decoration: none;
-}
-
-.card-icon p.titolo-scarpa {
-    font-weight:700;
-    font-size: 38px;
-    color: #111111;
 }
 
 .card-group-icon a {
@@ -173,8 +175,21 @@ nav a {
     border-radius: 20px;
     background-color: #F5F5F7;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 24px;
+}
+
+.card-icon img {
+    height: 260px;
+    width: 480px;
+    object-fit: cover;
+}
+
+.card-icon p {
+    font-weight:700;
+    font-size: 32px;
+    color: #111111;
 }
 
 .card p.titolo-scarpa {
@@ -189,88 +204,82 @@ nav a {
     color: #909090;
 }
 
-.card-group:last-child {
-    margin-bottom: 0px;
-}
-
-.card-group a, .discover-more a {
+.card-group a, .discover-more a, .upcoming-releases a {
     text-decoration: none;
 }
 
-.viewmore p {
-    background-color: #111111;
-    color: #F5F5F7;
-    font-size: 25px;
-    font-weight:600;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    padding-left: 37px;
-    padding-right: 37px;
-    border-radius: 100px;
+.button-release {
+    background-color: #1a1a1a;
+    border-radius:  26px;
+    width: 188px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 40px;
 }
 
-.upcoming-releases a {
-    text-decoration: none;
+.button-release p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.culture-content {
+.culture-content, .sneaker-model-content, .sneaker-collab-content {
     display: flex;
     gap: 100px;
     margin-bottom: 100px;
 }
 
-.culture-content:last-child {
+.culture-content:last-child, .sneaker-model-content:last-child, .sneaker-collab-content:last-child {
     margin-bottom: 0;
 }
 
-.culture-text {
+.culture-text, .sneaker-model-text, .sneaker-collab-text {
     max-width: 620px;
 }
 
-.culture-text h2 {
+.culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
     font-size: 34px;
     margin-bottom: 20px;
 }
 
-.culture-p p {
+.culture-p p, .sneaker-model-p p, .sneaker-collab-p p {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 1.5em;
+    font-weight: 500;
 }
 
-.culture-p p:last-child {
+.culture-p p:last-child, .sneaker-model-p p:last-child, .sneaker-collab-p p:last-child {
     margin-bottom: 0;
 }
 
-.culture-p {
+.culture-p, .sneaker-model-p, .sneaker-collab-p {
     margin-bottom: 100px;
 }
 
-.culture-p:last-child {
+.culture-p:last-child, .sneaker-model-p:last-child, .sneaker-collab-p:last-child {
     margin-bottom: 0;
 }
 
-.culture-image img {
-    background-color: #1a1a1a;
+.culture-image-1 img, .culture-image-2 img, .sneaker-model-image img, .sneaker-collab-image img, .sneaker-collab-image-2 img {
     border-radius: 20px;
-    height: 818px;
-    width: 620px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
-.culture-image-2 {
+.culture-image-2, .sneaker-collab-image-2 {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.culture-image-2 img {
-    background-color: #1a1a1a;
-    border-radius: 20px;
-    height: 570px;
-    width: 620px;
-    object-fit: cover;
+.sneaker-model-content-2, .sneaker-collab-content-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 footer {

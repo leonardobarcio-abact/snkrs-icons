@@ -156,7 +156,7 @@ nav a {
 .card-gallery {
     display: flex;
     height: 400px;
-    width: 660px;
+    max-width: 660px;
     border-radius: 20px;
     background-color: #F5F5F7;
     justify-content: center;
@@ -165,7 +165,7 @@ nav a {
 
 .card-gallery img {
     height: 360px;
-    width: 480px;
+    width: 660px;
     object-fit: cover;
 }
 
@@ -247,13 +247,13 @@ nav a {
     font-weight: 600;
 }
 
-.culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-collab-content {
+.culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-model-content-2, .sneaker-collab-content {
     display: flex;
     gap: 100px;
     margin-bottom: 100px;
 }
 
-.culture-content-1:last-child, .culture-content-2:last-child, .sneaker-model-content-1:last-child, .sneaker-collab-content:last-child {
+.culture-content-1:last-child, .culture-content-2:last-child, .sneaker-model-content-1:last-child, .sneaker-model-content-2:last-child, .sneaker-collab-content:last-child {
     margin-bottom: 0;
 }
 
@@ -298,7 +298,7 @@ nav a {
     gap: 50px;
 }
 
-.sneaker-model-content-col, .sneaker-collab-content-col {
+.sneaker-model-content-col, .sneaker-model-content-col-2, .sneaker-collab-content-col {
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -389,9 +389,13 @@ p.footer-logo {
         grid-template-columns: repeat(2,1fr);
     }
 
-    .culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-collab-content {
+    .culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-model-content-2, .sneaker-collab-content {
         gap: 60px;
         margin-bottom: 60px;
+    }
+
+    .sneaker-model-content-col, .sneaker-model-content-col-2 {
+        gap: 60px;
     }
 
     .culture-image-2, .sneaker-collab-image-2 {
@@ -410,11 +414,15 @@ p.footer-logo {
         max-width: 620px;
     }
 
-    .culture-content-1, .sneaker-model-content-1, .sneaker-collab-content {
+    .culture-content-1, .sneaker-model-content-2, .sneaker-collab-content {
         flex-direction: column;
     }
 
-    .culture-content-2 {
+    .culture-content-2, .sneaker-model-content-1 {
+        flex-direction: column-reverse;
+    }
+
+    .sneaker-model-content-col-2 {
         flex-direction: column-reverse;
     }
 

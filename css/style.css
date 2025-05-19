@@ -87,7 +87,8 @@ nav a {
 }
 
 .card-group {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
 
@@ -124,7 +125,7 @@ nav a {
 .card-discover-more-1 img, .card-discover-more-2 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .card-discover-more-2 {
@@ -187,7 +188,7 @@ nav a {
 .card-icon, .card-favourites {
     display: flex;
     height: 400px;
-    width: 660px;
+    max-width: 660px;
     border-radius: 20px;
     background-color: #F5F5F7;
     flex-direction: column;
@@ -198,7 +199,7 @@ nav a {
 
 .card-icon img, .card-favourites img {
     height: 260px;
-    width: 480px;
+    width: 660px;
     object-fit: cover;
 }
 
@@ -246,13 +247,13 @@ nav a {
     font-weight: 600;
 }
 
-.culture-content, .sneaker-model-content, .sneaker-collab-content {
+.culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-collab-content {
     display: flex;
     gap: 100px;
     margin-bottom: 100px;
 }
 
-.culture-content:last-child, .sneaker-model-content:last-child, .sneaker-collab-content:last-child {
+.culture-content-1:last-child, .culture-content-2:last-child, .sneaker-model-content-1:last-child, .sneaker-collab-content:last-child {
     margin-bottom: 0;
 }
 
@@ -297,14 +298,14 @@ nav a {
     gap: 50px;
 }
 
-.sneaker-model-content-2, .sneaker-collab-content-2 {
+.sneaker-model-content-col, .sneaker-collab-content-col {
     display: flex;
     flex-direction: column;
     gap: 100px;
 }
 
 .gap {
-    margin: 0 20px;
+    margin: 0 34px;
 }
 
 footer {
@@ -381,4 +382,47 @@ p.footer-logo {
 .footer-info {
     display: flex;
     gap: 16px;
+}
+
+@media (max-width:1240px) {
+    .card-group, .card-group-releases {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-collab-content {
+        gap: 60px;
+        margin-bottom: 60px;
+    }
+
+    .culture-image-2, .sneaker-collab-image-2 {
+        gap: 30px;
+    }
+}
+
+@media (max-width:1120px) {
+    .culture-text, .sneaker-model-text, .sneaker-collab-text {
+    max-width: 480px;
+    }
+}
+
+@media (max-width:1000px) {
+    .culture-text, .sneaker-model-text, .sneaker-collab-text {
+        max-width: 620px;
+    }
+
+    .culture-content-1, .sneaker-model-content-1, .sneaker-collab-content {
+        flex-direction: column;
+    }
+
+    .culture-content-2 {
+        flex-direction: column-reverse;
+    }
+
+    .culture-p, .sneaker-model-p, .sneaker-collab-p {
+        margin-bottom: 60px;
+    }
+
+    nav, footer {
+        display: none;
+    }
 }

@@ -71,7 +71,7 @@ nav a {
 .card {
     display: flex;
     height: 420px;
-    width: 320px;
+    max-width: 320px;
     border-radius: 20px;
     background-color: #F5F5F7;
     flex-direction: column;
@@ -111,7 +111,7 @@ nav a {
 
 .card-discover-more-1 {
     height: 540px;
-    width: 660px;
+    max-width: 660px;
     background-color: #F5F5F7;
     border-radius: 20px;
     display: flex;
@@ -129,7 +129,7 @@ nav a {
 
 .card-discover-more-2 {
     height: 260px;
-    width: 660px;
+    max-width: 660px;
     background-color: #F5F5F7;
     border-radius: 20px;
     display: flex;
@@ -301,6 +301,10 @@ nav a {
     display: flex;
     flex-direction: column;
     gap: 100px;
+}
+
+.gap {
+    margin: 0 20px;
 }
 
 footer {

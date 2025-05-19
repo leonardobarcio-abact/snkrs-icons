@@ -433,4 +433,9 @@ p.footer-logo {
     nav, .footer, .footer-website-info {
         flex-direction: column;
     }
+
+    nav ul {
+        gap: 12px;
+        margin-top: 18px;
+    }
 }

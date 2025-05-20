@@ -66,6 +66,7 @@ nav a {
     font-size: 48px;
     margin-bottom: 40px;
     font-weight: 700;
+    text-align: center;
 }
 
 .card {
@@ -169,19 +170,11 @@ nav a {
     object-fit: cover;
 }
 
-.card p {
+.card p, .card-icon p, .card-favourites {
     text-align: center;
 }
 
-.card-icon p {
-    text-align: center;
-}
-
-.card-group-home a {
-    text-decoration: none;
-}
-
-.card-group-icon a {
+.card-group-home a, .card-group-icon a {
     text-decoration: none;
 }
 
@@ -312,7 +305,6 @@ footer {
     font-size: 18px;
     color: #fff;
     background-color: #1a1a1a;
-    font-size: 18px;
 }
 
 .footer-content {
@@ -401,6 +393,16 @@ p.footer-logo {
     .culture-image-2, .sneaker-collab-image-2 {
         gap: 30px;
     }
+
+    .card {
+        max-width: 660px;
+        height: 400px;
+    }
+
+    .card img {
+        width: 660px;
+        object-fit: contain;
+    }
 }
 
 @media (max-width:1120px) {
@@ -430,7 +432,20 @@ p.footer-logo {
         margin-bottom: 60px;
     }
 
-    nav, .footer, .footer-website-info, .footer-info {
+    .footer, .footer-website-info {
+        gap: 60px;
+    }
+
+    .footer-website-info {
+        flex-direction: column-reverse;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    nav, .footer, .footer-info {
         flex-direction: column;
     }
 
@@ -447,5 +462,13 @@ p.footer-logo {
 
     .card-group-discover-more {
         flex-direction: column;
+    }
+
+    .card, .card-discover-more-1, .card-discover-more-2, .card-icon, .card-favourites, .card-gallery {
+        height: 360px;
+    }
+
+    .card-discover-more-1 img, .card-discover-more-2 img {
+        height: 260px;
     }
 }

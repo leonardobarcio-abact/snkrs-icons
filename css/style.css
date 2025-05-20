@@ -430,12 +430,22 @@ p.footer-logo {
         margin-bottom: 60px;
     }
 
-    nav, .footer, .footer-website-info {
+    nav, .footer, .footer-website-info, .footer-info {
         flex-direction: column;
     }
 
     nav ul {
         gap: 12px;
         margin-top: 18px;
+    }
+}
+
+@media (max-width:680px) {
+    .card-group, .card-group-releases, .card-group-icon, .card-group-gallery, .card-group-favourites {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .card-group-discover-more {
+        flex-direction: column;
     }
 }

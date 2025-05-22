@@ -346,7 +346,7 @@ footer {
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 50px;
+    padding: 50px 26px;
 }
 
 footer a {
@@ -398,7 +398,7 @@ p.footer-logo {
 .footer-website-info {
     display: flex;
     justify-content: space-between;
-    padding: 0 50px 50px 50px;
+    padding: 0 26px 50px 26px;
     font-weight: 400px;
 }
 
@@ -464,16 +464,11 @@ p.footer-logo {
     }
 
     .footer, .footer-website-info {
-        gap: 60px;
-    }
-
-    .footer {
-        padding: 26px;
+        gap: 50px;
     }
 
     .footer-website-info {
         flex-direction: column-reverse;
-        padding: 0 26px 26px 26px;
     }
 
     .copyright {

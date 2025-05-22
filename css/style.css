@@ -380,6 +380,28 @@ footer a {
     height: 24px;
 }
 
+.footer-social-icons a, .footer-nav a, .footer-models a, .footer-collabs a, .footer-contact a, .footer-info a {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-social-icons a::before, .footer-nav a::before, .footer-models a::before, .footer-collabs a::before, .footer-contact a::before, .footer-info a::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-social-icons a:hover::before, .footer-nav a:hover::before, .footer-models a:hover::before, .footer-collabs a:hover::before, .footer-contact a:hover::before, .footer-info a:hover::before {
+    transform: scaleX(1);
+}
+
 .footer-nav ul, .footer-models ul, .footer-collabs ul, .footer-contact ul {
     display: flex;
     flex-direction: column;

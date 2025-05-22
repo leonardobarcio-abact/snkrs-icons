@@ -211,7 +211,7 @@ nav a {
 
 .card-icon, .card-favourites {
     display: flex;
-    height: 400px;
+    height: 380px;
     max-width: 660px;
     border-radius: 20px;
     background-color: #F5F5F7;

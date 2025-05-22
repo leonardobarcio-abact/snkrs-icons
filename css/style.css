@@ -467,8 +467,13 @@ p.footer-logo {
         gap: 60px;
     }
 
+    .footer {
+        padding: 26px;
+    }
+
     .footer-website-info {
         flex-direction: column-reverse;
+        padding: 0 26px 26px 26px;
     }
 
     .copyright {

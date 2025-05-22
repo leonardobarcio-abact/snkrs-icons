@@ -11,6 +11,8 @@ body {
 
 img {
     max-width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 nav {
@@ -26,6 +28,11 @@ nav {
     margin: auto;
 }
 
+p::selection, h2::selection, li::selection, a::selection {
+  background: #444444;
+  color: #fff;
+}
+
 nav ul {
     display: flex;
     list-style-type: none;
@@ -36,6 +43,7 @@ nav a {
     text-decoration: none;
     color: #111111;
     font-weight: 500;
+    user-select: none;
 }
 
 .logo {
@@ -422,6 +430,7 @@ footer a {
 p.footer-logo {
     font-size: 30px;
     font-weight: 700;
+    user-select: none;
 }
 
 .footer-website-info {

@@ -444,6 +444,10 @@ p.footer-logo {
     display: none;
 }
 
+/* .sneaker-model-content-col > .sneaker-model-text, .sneaker-model-content-col > .sneaker-model-image, .sneaker-model-content-col-2 > .sneaker-model-text, .sneaker-model-content-col-2 > .sneaker-model-image, .sneaker-collab-content-col > .sneaker-collab-text, .sneaker-collab-content-col > .sneaker-collab-image, .sneaker-collab-content-col-2 > .sneaker-collab-text, .sneaker-collab-content-col-2 > .sneaker-collab-image {
+    flex: 1;
+} */
+
 @media (max-width:1240px) {
     .card-group, .card-group-releases {
         grid-template-columns: repeat(2,1fr);

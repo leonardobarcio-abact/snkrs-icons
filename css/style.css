@@ -339,14 +339,15 @@ footer {
 }
 
 .footer-content {
-    max-width: 1440px;
+    max-width: 1392px;
     margin: auto;
+    padding: 0 26px;
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 50px 26px;
+    padding: 50px 0;
 }
 
 footer a {
@@ -398,7 +399,7 @@ p.footer-logo {
 .footer-website-info {
     display: flex;
     justify-content: space-between;
-    padding: 0 26px 50px 26px;
+    padding: 0 0 50px 0;
     font-weight: 400px;
 }
 

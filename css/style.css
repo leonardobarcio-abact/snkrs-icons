@@ -15,7 +15,7 @@ img {
     -webkit-user-drag: none;
 }
 
-nav {
+.nav-1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,13 +37,13 @@ p::selection, h2::selection, li::selection, a::selection {
   color: #fff;
 }
 
-nav ul {
+.nav-1 ul {
     display: flex;
     list-style-type: none;
     gap: 40px;
 }
 
-nav a {
+.nav-1 a {
     text-decoration: none;
     color: #111111;
     font-weight: 500;
@@ -51,7 +51,7 @@ nav a {
     position: relative;
 }
 
-nav a::after, nav a::before {
+.nav-1 a::after, .nav-1 a::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -64,18 +64,22 @@ nav a::after, nav a::before {
     transition: transform 0.4s ease-out;
 }
 
-nav a::before {
+.nav-1 a::before {
     top: -4px;
     transform-origin: left;
 }
 
 
-nav a:hover::after, nav a:hover::before {
+.nav-1 a:hover::after, .nav-1 a:hover::before {
     transform: scaleX(1);
 }
 
-.logo {
+.nav-1 .logo {
     font-weight: 700;
+}
+
+.nav-2 {
+    display: none;
 }
 
 .hero {
@@ -617,9 +621,185 @@ p.footer-logo {
     }
 }
 
-@media (max-width:800px) {
-    nav ul {
+@media (max-width:880px) {
+    .nav-1 {
         display: none;
+    }
+
+    .nav-2 {
+        max-width: 1340px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .nav-2 a.logo-2 {
+        text-decoration: none;
+        color: #111;
+        font-weight: 700;
+    }
+
+    input {
+        display: none;
+    }
+
+    .open {
+        background-color: #111;
+        width: 24px;
+        height: 3px;
+        display: block;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        top: 6px;
+    }
+
+    .open:before {
+        content: "";
+        background-color: #111;
+        width: 24px;
+        height: 3px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: -6px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+
+    .open:after {
+        content: "";
+        background-color: #111;
+        width: 24px;
+        height: 3px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: 3px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+
+    .menuOpen {
+        width: 24px;
+        height: 20px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 999;
+    }
+
+    .menuOpen:hover .open:before {
+        top: -9px;
+    }
+
+    .menuOpen:hover .open:after {
+        top: 5px;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #111;
+        z-index: 998;
+    }
+
+    .menu label {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 50px;
+        top: 15px;
+        background-size: 100%;
+        cursor: pointer;
+    }
+
+    .menu .menuContent {
+        position: relative;
+        top: 45%;
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-top: -170px;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .menu ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s;
+        padding: 20px 0;
+    }
+
+    .menu ul li a:hover {
+        color: #cecece;
+    }
+
+    .menuEffects {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .menuEffects ul {
+        transform: translateY(0%);
+        transition: all 0.5s;
+    }
+
+    #menuToggle:checked ~ .menuOpen {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    #menuToggle:checked ~ .menuEffects {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s;
+    }
+
+    #menuToggle:checked ~ .menuEffects ul {
+        opacity: 1;
+    }
+
+    #menuToggle:checked ~ .menuOpen .open {
+        background-color: transparent;
+    }
+
+    #menuToggle:checked ~ .menuOpen .open:before {
+        content: "";
+        background-color: white;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    #menuToggle:checked ~ .menuOpen .open:after {
+        content: "";
+        background-color: white;
+        transform: rotate(-45deg);
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    #menuToggle:not(:checked) ~ .menuEffects ul {
+        transform: translateY(-30%);
     }
 }
 
@@ -644,7 +824,7 @@ p.footer-logo {
         font-size: 36px;
     }
 
-    nav {
+    .nav-1 {
         padding: 20px 10px;
     }
 }

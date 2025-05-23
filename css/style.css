@@ -242,10 +242,6 @@ nav a:hover::after, nav a:hover::before {
     text-align: center;
 }
 
-.card-group-home a, .card-group-icon a {
-    text-decoration: none;
-}
-
 .card-icon, .card-favourites {
     display: flex;
     height: 380px;
@@ -279,6 +275,7 @@ nav a:hover::after, nav a:hover::before {
 .card-favourites p {
     font-weight: 600;
     font-size: 26px;
+    color: #111111;
 }
 
 .card p.titolo-scarpa {
@@ -293,7 +290,7 @@ nav a:hover::after, nav a:hover::before {
     color: #909090;
 }
 
-.card-group a, .discover-more a, .upcoming-releases a {
+.card-group a, .discover-more a, .upcoming-releases a, .card-group-icon a, .card-group-favourites a {
     text-decoration: none;
 }
 

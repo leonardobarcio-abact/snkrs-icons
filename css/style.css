@@ -760,7 +760,7 @@ p.footer-logo {
     #menuToggle:checked ~ .menuOpen {
         position: fixed;
         top: 20px;
-        right: 20px;
+        right: 36px;
         z-index: 999;
     }
 

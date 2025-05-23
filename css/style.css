@@ -580,17 +580,12 @@ p.footer-logo {
         font-size: 14px;
     }
 
-    nav, .footer, .footer-info ul {
+    .footer, .footer-info ul {
         flex-direction: column;
     }
 
     .footer-title-hide {
         display: block;
-    }
-
-    nav ul {
-        gap: 12px;
-        margin-top: 18px;
     }
 
     .card-icon, .card-favourites {
@@ -622,6 +617,12 @@ p.footer-logo {
     }
 }
 
+@media (max-width:800px) {
+    nav ul {
+        display: none;
+    }
+}
+
 @media (max-width:680px) {
     .card-group, .card-group-releases, .card-group-icon, .card-group-gallery, .card-group-favourites {
         grid-template-columns: repeat(1,1fr);
@@ -641,6 +642,10 @@ p.footer-logo {
 
     .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
         font-size: 36px;
+    }
+
+    nav {
+        padding: 20px 10px;
     }
 }
 

@@ -23,6 +23,10 @@ nav {
     padding: 20px;
 }
 
+.gap {
+    margin: 0 26px;
+}
+
 .content {
     max-width: 1340px;
     margin: auto;
@@ -116,7 +120,7 @@ nav a:hover::after, nav a:hover::before {
     transition: all 0.5s ease;
 }
 
-.card::before {
+.card::before, .card-icon::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -130,16 +134,16 @@ nav a:hover::after, nav a:hover::before {
     z-index: 0;
 }
 
-.card:hover {
+.card:hover, .card-icon:hover {
     transform: scale(1.02);
 }
 
-.card:hover::before {
+.card:hover::before, .card-icon:hover::before {
     opacity: 1;
     transform: rotate(-45deg) translateY(100%);
 }
 
-.card * {
+.card *, .card-icon * {
     position: relative;
     z-index: 1;
 }
@@ -254,6 +258,12 @@ nav a:hover::after, nav a:hover::before {
     padding: 24px;
 }
 
+.card-icon {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
 .card-icon img, .card-favourites img {
     height: 260px;
     width: 660px;
@@ -296,12 +306,15 @@ nav a:hover::after, nav a:hover::before {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-}
-
-.button-release p {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-release:hover {
+    background-color: #424242;
+    transform: scale(1.05);
 }
 
 .culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-model-content-2, .sneaker-collab-content {
@@ -359,10 +372,6 @@ nav a:hover::after, nav a:hover::before {
     display: flex;
     flex-direction: column;
     gap: 100px;
-}
-
-.gap {
-    margin: 0 26px;
 }
 
 footer {

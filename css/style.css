@@ -505,13 +505,16 @@ p.footer-logo {
     .card img {
         width: 660px;
         object-fit: contain;
-        scale: 1.4;
     }
 }
 
 @media (max-width:1120px) {
     .culture-text, .sneaker-model-text, .sneaker-collab-text {
         max-width: 480px;
+    }
+
+    .card-icon img, .card-favourites img {
+        object-fit: contain;
     }
 }
 
@@ -561,6 +564,14 @@ p.footer-logo {
         gap: 12px;
         margin-top: 18px;
     }
+
+    .card-icon, .card-favourites {
+        height: 320px;
+    }
+
+    .card-gallery {
+        height: 340px;
+    }
 }
 
 @media (max-width:680px) {
@@ -572,22 +583,11 @@ p.footer-logo {
         flex-direction: column;
     }
 
-    .card, .card-discover-more-1, .card-discover-more-2, .card-icon, .card-favourites, .card-gallery {
+    .card, .card-discover-more-1, .card-discover-more-2  {
         height: 360px;
     }
 
     .card-discover-more-1 img, .card-discover-more-2 img {
         height: 260px;
     }
-
-    .card img {
-        scale: 1.5;
-    }
-}
-
-@media (max-width:400px) {
-    .card img {
-        scale: 1.3;
-    }
-    
 }

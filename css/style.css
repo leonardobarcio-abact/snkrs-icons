@@ -238,7 +238,7 @@ nav a:hover::after, nav a:hover::before {
     object-fit: cover;
 }
 
-.card p, .card-icon p, .card-favourites {
+.card p, .card-icon p, .card-favourites p {
     text-align: center;
 }
 
@@ -499,12 +499,32 @@ p.footer-logo {
 
     .card {
         max-width: 660px;
-        height: 400px;
+        height: 380px;
     }
 
     .card img {
         width: 660px;
         object-fit: contain;
+    }
+
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 44px;
+    }
+
+    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+        font-size: 30px;
+    }
+
+    .card-icon p {
+        font-size: 30px;
+    }
+
+    .card-favourites p {
+        font-size: 24px;
+    }
+
+    p.discover-more-card-text {
+        font-size: 34px;
     }
 }
 
@@ -515,6 +535,14 @@ p.footer-logo {
 
     .card-icon img, .card-favourites img {
         object-fit: contain;
+    }
+
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 40px;
+    }
+
+    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+        font-size: 26px;
     }
 }
 
@@ -572,6 +600,26 @@ p.footer-logo {
     .card-gallery {
         height: 340px;
     }
+
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 38px;
+    }
+
+    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+        font-size: 24px;
+    }
+
+    .card-icon p {
+        font-size: 28px;
+    }
+
+    .card-favourites p {
+        font-size: 20px;
+    }
+
+    p.discover-more-card-text {
+        font-size: 32px;
+    }
 }
 
 @media (max-width:680px) {
@@ -589,5 +637,27 @@ p.footer-logo {
 
     .card-discover-more-1 img, .card-discover-more-2 img {
         height: 260px;
+    }
+
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width:360px) {
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 30px;
+    }
+
+    p.discover-more-card-text {
+        font-size: 28px;
+    }
+
+    .card p.titolo-scarpa, .card p.data {
+        font-size: 20px;
+    }
+
+    .card-icon p {
+        font-size: 24px;
     }
 }

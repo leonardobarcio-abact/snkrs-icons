@@ -69,7 +69,6 @@ p::selection, h2::selection, li::selection, a::selection {
     transform-origin: left;
 }
 
-
 .nav-1 a:hover::after, .nav-1 a:hover::before {
     transform: scaleX(1);
 }

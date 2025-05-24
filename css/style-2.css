@@ -1,0 +1,906 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "futura-pt", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    color: #111111;
+}
+
+img {
+    max-width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.nav-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.gap {
+    margin: 0 26px;
+}
+
+.content {
+    max-width: 1340px;
+    margin: auto;
+}
+
+p::selection, h2::selection, li::selection, a::selection {
+  background: #444444;
+  color: #fff;
+}
+
+.nav-1 ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+
+.nav-1 a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 500;
+    user-select: none;
+    position: relative;
+}
+
+.nav-1 a::after, .nav-1 a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #111111;
+    bottom: -4px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.nav-1 a::before {
+    top: -4px;
+    transform-origin: left;
+}
+
+.nav-1 .logo {
+    font-weight: 700;
+}
+
+.nav-2 {
+    display: none;
+}
+
+.hero {
+    height: 620px;
+    border-radius: 20px;
+}
+
+.hero img {
+    object-fit: cover;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.new-releases, .discover-more, .culture, .hot-releases, .upcoming-releases, .icon, .sneaker-model, .sneaker-collab, .gallery, .favourites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    height: 420px;
+    max-width: 320px;
+    border-radius: 20px;
+    background-color: #F5F5F7;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.card::before, .card-icon::before, .card-favourites::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(0deg, transparent, transparent 30%,rgba(123, 123, 124, 0.3));
+    transform: rotate(-45deg);
+    transition: all 0.8s ease;
+    opacity: 0;
+    z-index: 0;
+}
+
+.card *, .card-icon *, .card-favourites * {
+    position: relative;
+    z-index: 1;
+}
+
+.card img {
+    width: 280px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-group {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.card-group-discover-more {
+    display: flex;
+    gap: 20px;
+}
+
+.card-group-releases {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.discover-more-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-discover-more-1 {
+    height: 540px;
+    max-width: 660px;
+    background-color: #F5F5F7;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+}
+
+.card-discover-more-1 img, .card-discover-more-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-discover-more-2 {
+    height: 260px;
+    max-width: 660px;
+    background-color: #F5F5F7;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+}
+
+.discover-more-card-text {
+    color: #111111;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.card-group-icon, .card-group-gallery, .card-group-favourites {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.card-gallery {
+    display: flex;
+    height: 400px;
+    max-width: 660px;
+    border-radius: 20px;
+    background-color: #F5F5F7;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.card-gallery img {
+    height: 360px;
+    width: 660px;
+    object-fit: cover;
+}
+
+.card p, .card-icon p, .card-favourites p {
+    text-align: center;
+}
+
+.card-icon, .card-favourites {
+    display: flex;
+    height: 380px;
+    max-width: 660px;
+    border-radius: 20px;
+    background-color: #F5F5F7;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.card-icon img, .card-favourites img {
+    height: 260px;
+    width: 660px;
+    object-fit: cover;
+}
+
+.card-icon p {
+    font-weight:700;
+    font-size: 32px;
+    color: #111111;
+}
+
+.card-favourites p {
+    font-weight: 600;
+    font-size: 26px;
+    color: #111111;
+}
+
+.card p.titolo-scarpa {
+    font-weight:600;
+    font-size: 22px;
+    color: #111111;
+}
+
+.card p.data {
+    font-weight:500;
+    font-size: 22px;
+    color: #909090;
+}
+
+.card-group a, .discover-more a, .upcoming-releases a, .card-group-icon a, .card-group-favourites a {
+    text-decoration: none;
+}
+
+.button-release {
+    background-color: #1a1a1a;
+    border-radius:  26px;
+    width: 188px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-model-content-2, .sneaker-collab-content {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.culture-content-1:last-child, .culture-content-2:last-child, .sneaker-model-content-1:last-child, .sneaker-model-content-2:last-child, .sneaker-collab-content:last-child {
+    margin-bottom: 0;
+}
+
+.culture-text, .sneaker-model-text, .sneaker-collab-text {
+    max-width: 620px;
+}
+
+.culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.culture-p p, .sneaker-model-p p, .sneaker-collab-p p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-weight: 500;
+}
+
+.culture-p p:last-child, .sneaker-model-p p:last-child, .sneaker-collab-p p:last-child {
+    margin-bottom: 0;
+}
+
+.culture-p, .sneaker-model-p, .sneaker-collab-p {
+    margin-bottom: 100px;
+}
+
+.culture-p:last-child, .sneaker-model-p:last-child, .sneaker-collab-p:last-child {
+    margin-bottom: 0;
+}
+
+.culture-image-1 img, .culture-image-2 img, .sneaker-model-image img, .sneaker-collab-image img, .sneaker-collab-image-2 img {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.culture-image-2, .sneaker-collab-image-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.sneaker-model-content-col, .sneaker-model-content-col-2, .sneaker-collab-content-col, .sneaker-collab-content-col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+footer {
+    font-size: 18px;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+
+.footer-content {
+    max-width: 1392px;
+    margin: auto;
+    padding: 0 26px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer ul, .footer-website-info ul {
+    list-style-type: none;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-social p {
+    font-weight: 600;
+}
+
+.footer-social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.footer-social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-social-icons a, .footer-nav a, .footer-models a, .footer-collabs a, .footer-contact a, .footer-info a {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-social-icons a::before, .footer-nav a::before, .footer-models a::before, .footer-collabs a::before, .footer-contact a::before, .footer-info a::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-nav ul, .footer-models ul, .footer-collabs ul, .footer-contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 400;
+}
+
+.footer-info ul {
+    display: flex;
+    gap: 16px;
+    font-weight: 400;
+}
+
+.footer-title {
+  font-weight: 600;  
+}
+
+p.footer-logo {
+    font-size: 30px;
+    font-weight: 700;
+    user-select: none;
+}
+
+.footer-website-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 50px 0;
+    font-weight: 400px;
+}
+
+.footer-title-hide {
+    display: none;
+}
+
+/* .sneaker-model-content-col > .sneaker-model-text, .sneaker-model-content-col > .sneaker-model-image, .sneaker-model-content-col-2 > .sneaker-model-text, .sneaker-model-content-col-2 > .sneaker-model-image, .sneaker-collab-content-col > .sneaker-collab-text, .sneaker-collab-content-col > .sneaker-collab-image, .sneaker-collab-content-col-2 > .sneaker-collab-text, .sneaker-collab-content-col-2 > .sneaker-collab-image {
+    flex: 1;
+} */
+
+@media (hover: hover) {
+  .nav-1 a:hover::after, 
+  .nav-1 a:hover::before {
+    transform: scaleX(1);
+  }
+
+  .card:hover, 
+  .card-icon:hover, 
+  .card-favourites:hover {
+    transform: scale(1.02);
+  }
+
+  .card:hover::before, 
+  .card-icon:hover::before, 
+  .card-favourites:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+  }
+
+  .button-release:hover {
+    background-color: #424242;
+    transform: scale(1.05);
+  }
+
+  .footer-social-icons a:hover::before, 
+  .footer-nav a:hover::before, 
+  .footer-models a:hover::before, 
+  .footer-collabs a:hover::before, 
+  .footer-contact a:hover::before, 
+  .footer-info a:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+@media (hover: none) {
+  /* Hide hover underline effects */
+  .nav-1 a::after,
+  .nav-1 a::before,
+  .card::before,
+  .card-icon::before,
+  .card-favourites::before,
+  .footer-social-icons a::before,
+  .footer-nav a::before,
+  .footer-models a::before,
+  .footer-collabs a::before,
+  .footer-contact a::before,
+  .footer-info a::before {
+    display: none !important;
+  }
+
+  /* Disable transform & background color changes on hover */
+  .card:hover,
+  .card-icon:hover,
+  .card-favourites:hover,
+  .button-release:hover {
+    transform: none !important;
+    background-color: inherit !important;
+  }
+}
+
+@media (max-width:1240px) {
+    .card-group, .card-group-releases {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .culture-content-1, .culture-content-2, .sneaker-model-content-1, .sneaker-model-content-2, .sneaker-collab-content {
+        gap: 60px;
+        margin-bottom: 60px;
+    }
+
+    .sneaker-model-content-col, .sneaker-model-content-col-2, .sneaker-collab-content-col, .sneaker-collab-content-col-2 {
+        gap: 60px;
+    }
+
+    .culture-image-2, .sneaker-collab-image-2 {
+        gap: 30px;
+    }
+
+    .card {
+        max-width: 660px;
+        height: 380px;
+    }
+
+    .card img {
+        width: 660px;
+        object-fit: contain;
+    }
+
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 44px;
+    }
+
+    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+        font-size: 30px;
+    }
+
+    .card-icon p {
+        font-size: 30px;
+    }
+
+    .card-favourites p {
+        font-size: 24px;
+    }
+
+    p.discover-more-card-text {
+        font-size: 34px;
+    }
+}
+
+@media (max-width:1120px) {
+    .culture-text, .sneaker-model-text, .sneaker-collab-text {
+        max-width: 480px;
+    }
+
+    .card-icon img, .card-favourites img {
+        object-fit: contain;
+    }
+
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 40px;
+    }
+
+    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width:1000px) {
+    .culture-text, .sneaker-model-text, .sneaker-collab-text {
+        max-width: 620px;
+    }
+
+    .culture-content-1, .sneaker-model-content-2, .sneaker-collab-content {
+        flex-direction: column;
+    }
+
+    .culture-content-2, .sneaker-model-content-1, .sneaker-collab-content-col-2 {
+        flex-direction: column-reverse;
+    }
+
+    .sneaker-model-content-col-2 {
+        flex-direction: column-reverse;
+    }
+
+    .culture-p, .sneaker-model-p, .sneaker-collab-p {
+        margin-bottom: 60px;
+    }
+
+    .footer, .footer-website-info {
+        gap: 50px;
+    }
+
+    .footer-website-info {
+        flex-direction: column-reverse;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .footer, .footer-info ul {
+        flex-direction: column;
+    }
+
+    .footer-title-hide {
+        display: block;
+    }
+
+    .card-icon, .card-favourites {
+        height: 320px;
+    }
+
+    .card-gallery {
+        height: 340px;
+    }
+
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 38px;
+    }
+
+    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+        font-size: 24px;
+    }
+
+    .card-icon p {
+        font-size: 28px;
+    }
+
+    .card-favourites p {
+        font-size: 20px;
+    }
+
+    p.discover-more-card-text {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:880px) {
+    .nav-1 {
+        display: none;
+    }
+
+    .nav-2 {
+        max-width: 1340px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .nav-2 a.logo-2 {
+        text-decoration: none;
+        color: #111;
+        font-weight: 700;
+        user-select: none;
+        position: relative;
+    }
+
+    .nav-2 a.logo-2::after, .nav-2 a.logo-2::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #111111;
+        bottom: -4px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease-out;
+    }
+
+    .nav-2 a.logo-2::before {
+        top: -4px;
+        transform-origin: left;
+    }
+
+    .nav-2 a.logo-2:hover::after, .nav-2 a.logo-2:hover::before {
+        transform: scaleX(1);
+    }
+
+    input {
+        display: none;
+    }
+
+    .open {
+        background-color: #111;
+        width: 24px;
+        height: 3px;
+        display: block;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        top: 6px;
+    }
+
+    .open:before {
+        content: "";
+        background-color: #111;
+        width: 24px;
+        height: 3px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: -6px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+
+    .open:after {
+        content: "";
+        background-color: #111;
+        width: 24px;
+        height: 3px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: 3px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+
+    .menuOpen {
+        width: 24px;
+        height: 20px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 999;
+    }
+
+    .menuOpen:hover .open:before {
+        top: -9px;
+    }
+
+    .menuOpen:hover .open:after {
+        top: 5px;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: #111;
+        z-index: 998;
+    }
+
+    .menu label {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 50px;
+        top: 15px;
+        background-size: 100%;
+        cursor: pointer;
+    }
+
+    .menu .menuContent {
+        position: relative;
+        top: 45%;
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-top: -170px;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .menu ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s;
+        padding: 20px 0;
+    }
+
+    .menu ul li a:hover {
+        color: #cecece;
+    }
+
+    .menuEffects {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .menuEffects ul {
+        transform: translateY(0%);
+        transition: all 0.5s;
+    }
+
+    #menuToggle:checked ~ .menuOpen {
+        position: fixed;
+        top: 20px;
+        right: 36px;
+        z-index: 999;
+    }
+
+    #menuToggle:checked ~ .menuEffects {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s;
+    }
+
+    #menuToggle:checked ~ .menuEffects ul {
+        opacity: 1;
+    }
+
+    #menuToggle:checked ~ .menuOpen .open {
+        background-color: transparent;
+    }
+
+    #menuToggle:checked ~ .menuOpen .open:before {
+        content: "";
+        background-color: white;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    #menuToggle:checked ~ .menuOpen .open:after {
+        content: "";
+        background-color: white;
+        transform: rotate(-45deg);
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    #menuToggle:not(:checked) ~ .menuEffects ul {
+        transform: translateY(-30%);
+    }
+}
+
+@media (max-width:680px) {
+    .card-group, .card-group-releases, .card-group-icon, .card-group-gallery, .card-group-favourites {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .card-group-discover-more {
+        flex-direction: column;
+    }
+
+    .card, .card-discover-more-1, .card-discover-more-2  {
+        height: 360px;
+    }
+
+    .card-discover-more-1 img, .card-discover-more-2 img {
+        height: 260px;
+    }
+
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 36px;
+    }
+
+    .nav-1 {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width:360px) {
+    .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+        font-size: 30px;
+    }
+
+    p.discover-more-card-text {
+        font-size: 28px;
+    }
+
+    .card p.titolo-scarpa, .card p.data {
+        font-size: 20px;
+    }
+
+    .card-icon p {
+        font-size: 24px;
+    }
+}

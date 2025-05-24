@@ -491,32 +491,6 @@ p.footer-logo {
   }
 }
 
-@media (hover: none) {
-  /* Hide hover underline effects */
-  .nav-1 a::after,
-  .nav-1 a::before,
-  .card::before,
-  .card-icon::before,
-  .card-favourites::before,
-  .footer-social-icons a::before,
-  .footer-nav a::before,
-  .footer-models a::before,
-  .footer-collabs a::before,
-  .footer-contact a::before,
-  .footer-info a::before {
-    display: none !important;
-  }
-
-  /* Disable transform & background color changes on hover */
-  .card:hover,
-  .card-icon:hover,
-  .card-favourites:hover,
-  .button-release:hover {
-    transform: none !important;
-    background-color: inherit !important;
-  }
-}
-
 @media (max-width:1240px) {
     .card-group, .card-group-releases {
         grid-template-columns: repeat(2,1fr);
@@ -885,6 +859,32 @@ p.footer-logo {
     .nav-1 {
         padding: 20px 10px;
     }
+}
+
+@media (max-width:600px) {
+  /* Hide hover underline effects */
+  .nav-1 a::after,
+  .nav-1 a::before,
+  .card::before,
+  .card-icon::before,
+  .card-favourites::before,
+  .footer-social-icons a::before,
+  .footer-nav a::before,
+  .footer-models a::before,
+  .footer-collabs a::before,
+  .footer-contact a::before,
+  .footer-info a::before {
+    display: none !important;
+  }
+
+  /* Disable transform & background color changes on hover */
+  .card:hover,
+  .card-icon:hover,
+  .card-favourites:hover,
+  .button-release:hover {
+    transform: none !important;
+    background-color: inherit !important;
+  }
 }
 
 @media (max-width:360px) {

@@ -635,6 +635,30 @@ p.footer-logo {
         text-decoration: none;
         color: #111;
         font-weight: 700;
+        user-select: none;
+        position: relative;
+    }
+
+    .nav-2 a.logo-2::after, .nav-2 a.logo-2::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #111111;
+        bottom: -4px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease-out;
+    }
+
+    .nav-2 a.logo-2::before {
+        top: -4px;
+        transform-origin: left;
+    }
+
+    .nav-2 a.logo-2:hover::after, .nav-2 a.logo-2:hover::before {
+        transform: scaleX(1);
     }
 
     input {

@@ -533,7 +533,7 @@ p.footer-logo {
         max-width: 480px;
     }
 
-    .card-icon img, .card-favourites img {
+    .card-icon img, .card-favourites img, .card-gallery img {
         object-fit: contain;
     }
 

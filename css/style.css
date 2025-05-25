@@ -93,6 +93,14 @@ p::selection, h2::selection, li::selection, a::selection {
     width: 100%;
 }
 
+.hero-max {
+    display: block;
+}
+
+.hero-1000, .hero-680, .hero-460, .hero-320 {
+    display: none;
+}
+
 .new-releases, .discover-more, .culture, .hot-releases, .upcoming-releases, .icon, .sneaker-model, .sneaker-collab, .gallery, .favourites {
     display: flex;
     flex-direction: column;
@@ -480,6 +488,14 @@ p.footer-logo {
 } */
 
 @media (max-width:1240px) {
+    .hero-max {
+        display: none;
+    }
+
+    .hero-1000 {
+        display: block;
+    }
+
     .card-group, .card-group-releases {
         grid-template-columns: repeat(2,1fr);
     }
@@ -547,6 +563,14 @@ p.footer-logo {
 }
 
 @media (max-width:1000px) {
+    .hero-1000 {
+        display: none;
+    }
+
+    .hero-680 {
+        display: block;
+    }
+
     .culture-text, .sneaker-model-text, .sneaker-collab-text {
         max-width: 620px;
     }
@@ -763,7 +787,7 @@ p.footer-logo {
     }
 
     .menu ul li a:hover {
-        color: #cecece;
+        text-decoration: underline;
     }
 
     .menuEffects {
@@ -824,6 +848,14 @@ p.footer-logo {
 }
 
 @media (max-width:680px) {
+    .hero-680 {
+        display: none;
+    }
+
+    .hero-460 {
+        display: block;
+    }
+
     .card-group, .card-group-releases, .card-group-icon, .card-group-gallery, .card-group-favourites {
         grid-template-columns: repeat(1,1fr);
     }
@@ -846,6 +878,16 @@ p.footer-logo {
 
     .nav-1 {
         padding: 20px 10px;
+    }
+}
+
+@media (max-width:460px) {
+    .hero-460 {
+        display: none;
+    }
+
+    .hero-320 {
+        display: block;
     }
 }
 

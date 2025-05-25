@@ -97,7 +97,7 @@ p::selection, h2::selection, li::selection, a::selection {
     display: block;
 }
 
-.hero-1000, .hero-680, .hero-460, .hero-320 {
+.hero-1240, .hero-1000, .hero-680, .hero-460 {
     display: none;
 }
 
@@ -492,7 +492,7 @@ p.footer-logo {
         display: none;
     }
 
-    .hero-1000 {
+    .hero-1240 {
         display: block;
     }
 
@@ -563,11 +563,11 @@ p.footer-logo {
 }
 
 @media (max-width:1000px) {
-    .hero-1000 {
+    .hero-1240 {
         display: none;
     }
 
-    .hero-680 {
+    .hero-1000 {
         display: block;
     }
 
@@ -658,6 +658,7 @@ p.footer-logo {
     .nav-2 a.logo-2 {
         text-decoration: none;
         color: #111;
+        font-size: 18px;
         font-weight: 700;
         user-select: none;
         position: relative;
@@ -848,11 +849,11 @@ p.footer-logo {
 }
 
 @media (max-width:680px) {
-    .hero-680 {
+    .hero-1000 {
         display: none;
     }
 
-    .hero-460 {
+    .hero-680 {
         display: block;
     }
 
@@ -882,12 +883,16 @@ p.footer-logo {
 }
 
 @media (max-width:460px) {
-    .hero-460 {
+    .hero-680 {
         display: none;
     }
 
-    .hero-320 {
+    .hero-460 {
         display: block;
+    }
+
+    .hero {
+        height: 580px;
     }
 }
 

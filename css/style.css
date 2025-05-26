@@ -131,7 +131,7 @@ p::selection, h2::selection, li::selection, a::selection {
     transition: all 0.5s ease;
 }
 
-.card::before, .card-icon::before, .card-favourites::before {
+.card::before, .card-icon::before, .card-favourites::before, .card-discover-more-1::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -140,21 +140,35 @@ p::selection, h2::selection, li::selection, a::selection {
     height: 200%;
     background: linear-gradient(0deg, transparent, transparent 30%,rgba(123, 123, 124, 0.3));
     transform: rotate(-45deg);
-    transition: all 0.8s ease;
+    transition: all 1s ease;
     opacity: 0;
     z-index: 0;
 }
 
-.card:hover, .card-icon:hover, .card-favourites:hover {
+.card-discover-more-2::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 240%;
+    height: 240%;
+    background: linear-gradient(0deg, transparent, transparent 30%,rgba(123, 123, 124, 0.3));
+    transform: rotate(-45deg);
+    transition: all 1s ease;
+    opacity: 0;
+    z-index: 0;
+}
+
+.card:hover, .card-icon:hover, .card-favourites:hover, .card-discover-more-1:hover, .card-discover-more-2:hover {
     transform: scale(1.02);
 }
 
-.card:hover::before, .card-icon:hover::before, .card-favourites:hover::before {
+.card:hover::before, .card-icon:hover::before, .card-favourites:hover::before, .card-discover-more-1:hover::before, .card-discover-more-2:hover::before {
     opacity: 1;
     transform: rotate(-45deg) translateY(100%);
 }
 
-.card *, .card-icon *, .card-favourites * {
+.card *, .card-icon *, .card-favourites *, .card-discover-more-1 *, .card-discover-more-2 * {
     position: relative;
     z-index: 1;
 }
@@ -199,6 +213,9 @@ p::selection, h2::selection, li::selection, a::selection {
     justify-content: space-between;
     align-items: center;
     padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
 }
 
 .card-discover-more-1 img, .card-discover-more-2 img {
@@ -217,6 +234,9 @@ p::selection, h2::selection, li::selection, a::selection {
     justify-content: space-between;
     align-items: center;
     padding: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
 }
 
 .discover-more-card-text {
@@ -879,6 +899,11 @@ p.footer-logo {
 
     .nav-1 {
         padding: 20px 10px;
+    }
+
+    .card-discover-more-2::before {
+        width: 200%;
+        height: 200%;
     }
 }
 

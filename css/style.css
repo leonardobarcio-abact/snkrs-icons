@@ -4,7 +4,7 @@
     --card-bg-color: #f5f5f7;
     --bg-content-color: #1a1a1a;
     --bg-hover-content-color: #424242;
-    --text-selection-color: #444444;
+    --selection-color: #444444;
 }
 
 * {
@@ -39,8 +39,8 @@ img {
     margin: auto;
 }
 
-p::selection, h2::selection, li::selection, a::selection {
-  background: var(--text-selection-color);
+p::selection, h2::selection, li::selection, a::selection, img::selection {
+  background: var(--selection-color);
   color: var(--text-color-2);
 }
 

@@ -4,7 +4,8 @@
     --card-bg-color: #f5f5f7;
     --bg-content-color: #1a1a1a;
     --bg-hover-content-color: #424242;
-    --selection-color: #444444;
+    --text-bg-selection-color: #444444;
+    --text-selection-color: #fff;
 }
 
 * {
@@ -40,8 +41,8 @@ img {
 }
 
 p::selection, h2::selection, li::selection, a::selection, img::selection {
-  background: var(--selection-color);
-  color: var(--text-color-2);
+  background: var(--text-bg-selection-color);
+  color: var(--text-selection-color);
 }
 
 .nav-1 ul {
@@ -971,4 +972,8 @@ p.footer-logo {
     .card-icon img, .card-favourites img, .card-gallery img {
         scale: 1.4;
     }
+}
+
+@media (prefers-color-scheme: dark) {
+
 }

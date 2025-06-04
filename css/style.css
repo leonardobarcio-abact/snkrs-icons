@@ -362,7 +362,7 @@ p::selection, h2::selection, li::selection, a::selection, img::selection {
     max-width: 620px;
 }
 
-.culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+.culture-text h3, .sneaker-model-text h3, .sneaker-collab-text h3 {
     font-size: 34px;
     margin-bottom: 20px;
 }
@@ -573,7 +573,7 @@ p.footer-logo {
         font-size: 44px;
     }
 
-    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+    .culture-text h3, .sneaker-model-text h3, .sneaker-collab-text h3 {
         font-size: 30px;
     }
 
@@ -600,7 +600,7 @@ p.footer-logo {
         font-size: 40px;
     }
 
-    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+    .culture-text h3, .sneaker-model-text h3, .sneaker-collab-text h3 {
         font-size: 26px;
     }
 }
@@ -647,7 +647,7 @@ p.footer-logo {
         font-size: 38px;
     }
 
-    .culture-text h2, .sneaker-model-text h2, .sneaker-collab-text h2 {
+    .culture-text h3, .sneaker-model-text h3, .sneaker-collab-text h3 {
         font-size: 24px;
     }
 

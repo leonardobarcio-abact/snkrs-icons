@@ -81,7 +81,9 @@ p::selection, h2::selection, li::selection, a::selection, img::selection {
 }
 
 .nav-1 .logo {
+    font-family: "futura-pt-condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-weight: 700;
+    font-size: 22px;
 }
 
 .nav-2 {
@@ -684,9 +686,10 @@ p.footer-logo {
     }
 
     .nav-2 a.logo-2 {
+        font-family: "futura-pt-condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
         text-decoration: none;
         color: var(--text-color);
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 700;
         position: relative;
     }

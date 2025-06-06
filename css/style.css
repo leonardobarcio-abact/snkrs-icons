@@ -119,6 +119,7 @@ p::selection, h2::selection, li::selection, a::selection, img::selection {
 }
 
 .new-releases h2, .discover-more h2,  .hot-releases h2, .upcoming-releases h2, .icon h2, .gallery h2, .favourites h2 {
+    font-family: "futura-pt-bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-size: 48px;
     margin-bottom: 40px;
     font-weight: 700;
@@ -366,8 +367,10 @@ p::selection, h2::selection, li::selection, a::selection, img::selection {
 }
 
 .culture-text h3, .sneaker-model-text h3, .sneaker-collab-text h3 {
+    font-family: "futura-pt-bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     font-size: 34px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .culture-p p, .sneaker-model-p p, .sneaker-collab-p p {

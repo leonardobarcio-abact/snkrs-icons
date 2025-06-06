@@ -54,7 +54,7 @@ p::selection, h2::selection, li::selection, a::selection, img::selection {
 .nav-1 a {
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
 }
 
@@ -819,6 +819,7 @@ p.footer-logo {
         text-decoration: none;
         transition: color 0.2s;
         padding: 20px 0;
+        font-weight: 600;
     }
 
     .menu ul li a:hover {
